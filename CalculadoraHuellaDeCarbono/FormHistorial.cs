@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace CalculadoraHuellaDeCarbono
+{
+    public partial class FormHistorial : Form
+    {
+        public FormHistorial()
+        {
+            InitializeComponent();
+        }
+
+        
+            private void FormHistorial_Load(object sender, EventArgs e)
+        {
+            dgvHistorial.DataSource = null;
+            dgvHistorial.DataSource = Datos.lista;
+        }
+    }
+}
